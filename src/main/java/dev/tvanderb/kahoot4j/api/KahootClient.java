@@ -1,6 +1,7 @@
 package dev.tvanderb.kahoot4j.api;
 
 import dev.tvanderb.kahoot4j.api.events.IEventManager;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * A class representing a client-side Kahoot player.
@@ -32,11 +33,6 @@ public interface KahootClient {
      * @return The username of this {@link dev.tvanderb.kahoot4j.api.KahootClient KahootClient}.
      */
     String getUsername();
-
-    /**
-     * Set this {@link dev.tvanderb.kahoot4j.api.KahootClient KahootClient}'s username.
-     */
-    void setUsername(String username);
 
     /**
      * @return The set {@link dev.tvanderb.kahoot4j.api.events.IEventManager IEventManager} for this {@link dev.tvanderb.kahoot4j.api.KahootClient KahootClient}.
