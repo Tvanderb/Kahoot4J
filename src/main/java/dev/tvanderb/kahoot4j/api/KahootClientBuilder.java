@@ -3,6 +3,7 @@ package dev.tvanderb.kahoot4j.api;
 import dev.tvanderb.kahoot4j.api.events.IEventManager;
 import dev.tvanderb.kahoot4j.api.events.KahootEventListener;
 import dev.tvanderb.kahoot4j.api.exception.InvalidUsernameException;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * A class to easily construct a {@link KahootClient}.
@@ -11,24 +12,20 @@ import dev.tvanderb.kahoot4j.api.exception.InvalidUsernameException;
  */
 public class KahootClientBuilder {
 
-    private String username;
+    private String username = null;
     private IEventManager eventManager;
 
     /**
      * Creates a new {@link KahootClientBuilder KahootBuilder} instance.
-     *
-     * @param username The username the client will have.
      */
-    public KahootClientBuilder(String username) {
-        this.username = username;
-    }
+    public KahootClientBuilder() {}
 
     /**
      * Change the username of this {@link KahootClientBuilder KahootBuilder} instance.
      *
      * @param username The new username.
      */
-    public void setUsername(String username) {
+    public void setUsername(@NotNull String username) {
         this.username = username;
     }
 
@@ -38,7 +35,7 @@ public class KahootClientBuilder {
      *
      * @param eventManager The new {@link dev.tvanderb.kahoot4j.api.events.IEventManager IEventManager}.
      */
-    public void setEventManager(IEventManager eventManager) {
+    public void setEventManager(@NotNull IEventManager eventManager) {
         this.eventManager = eventManager;
     }
 
