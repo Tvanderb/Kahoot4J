@@ -1,7 +1,7 @@
 package dev.tvanderb.kahoot4j.api.exception;
 
 /**
- * Exception thrown when a username exceeds the Kahoot limit.
+ * Exception thrown when there's something wrong with a username.
  *
  * @author Talon 'tvanderb' Vanderbeken
  */
