@@ -5,7 +5,6 @@ import dev.tvanderb.kahoot4j.api.events.IEventManager;
 import dev.tvanderb.kahoot4j.api.events.KahootEventListener;
 import org.jetbrains.annotations.NotNull;
 
-import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
 
