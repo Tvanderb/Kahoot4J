@@ -3,6 +3,7 @@ package dev.tvanderb.kahoot4j.api;
 import dev.tvanderb.kahoot4j.api.events.IEventManager;
 import dev.tvanderb.kahoot4j.api.events.KahootEventListener;
 import dev.tvanderb.kahoot4j.api.exception.InvalidUsernameException;
+import dev.tvanderb.kahoot4j.internal.KahootClientImpl;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -71,7 +72,7 @@ public class KahootClientBuilder {
             throw new InvalidUsernameException(username, "Username exceeds Kahoot's 15 character limit!");
         }
 
-        return null;
+        return new KahootClientImpl(username, eventManager);
     }
 
 }
