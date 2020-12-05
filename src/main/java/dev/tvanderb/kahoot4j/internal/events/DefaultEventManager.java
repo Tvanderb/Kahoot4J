@@ -1,5 +1,8 @@
-package dev.tvanderb.kahoot4j.api.events;
+package dev.tvanderb.kahoot4j.internal.events;
 
+import dev.tvanderb.kahoot4j.api.events.Event;
+import dev.tvanderb.kahoot4j.api.events.IEventManager;
+import dev.tvanderb.kahoot4j.api.events.KahootEventListener;
 import org.jetbrains.annotations.NotNull;
 
 import java.lang.reflect.Method;
