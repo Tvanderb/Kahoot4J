@@ -15,4 +15,6 @@ public interface Question {
 
     int getQuestionNumber();
 
+    void answer(AnswerBlock... answers);
+
 }

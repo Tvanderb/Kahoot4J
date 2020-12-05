@@ -16,7 +16,7 @@ public class InvalidGamePinException extends Exception {
     /**
      * Create a new {@link InvalidGamePinException} instance.
      *
-     * @param client The client that tried to connect.
+     * @param client  The client that tried to connect.
      * @param message The message to show in the stack trace.
      */
     public InvalidGamePinException(@NotNull KahootClient client, @NotNull Integer gamePin, @NotNull String message) {

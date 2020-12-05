@@ -11,15 +11,18 @@ import org.jetbrains.annotations.NotNull;
 public class Event {
 
     private final KahootClient client;
+    private final String raw;
 
     /**
      * Creates a new {@link dev.tvanderb.kahoot4j.api.events.Event Event} instance.
      *
+     * @param raw    The raw JSON message received from Kahoot.
      * @param client The {@link dev.tvanderb.kahoot4j.api.KahootClient KahootClient} that this event is for.
      */
     @NotNull
-    public Event(KahootClient client) {
+    public Event(@NotNull String raw, @NotNull KahootClient client) {
         this.client = client;
+        this.raw = raw;
     }
 
     /**
@@ -28,6 +31,14 @@ public class Event {
     @NotNull
     public KahootClient getClient() {
         return client;
+    }
+
+    /**
+     * @return The raw JSON message received from Kahoot.
+     */
+    @NotNull
+    public String getEventRaw() {
+        return raw;
     }
 
 }

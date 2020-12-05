@@ -15,7 +15,7 @@ public class InvalidUsernameException extends Exception {
      * Create a new {@link InvalidUsernameException} instance.
      *
      * @param username The username that caused this {@link InvalidUsernameException}.
-     * @param message The message to show in the stack trace.
+     * @param message  The message to show in the stack trace.
      */
     public InvalidUsernameException(@NotNull String username, @NotNull String message) {
         super(message);
