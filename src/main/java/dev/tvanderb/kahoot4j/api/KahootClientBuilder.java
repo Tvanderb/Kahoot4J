@@ -66,6 +66,10 @@ public class KahootClientBuilder {
      * @return A built {@link KahootClient}.
      */
     public KahootClient build() throws InvalidUsernameException {
+        if (username == null) {
+            throw new InvalidUsernameException("", "Username has not been defined!");
+        }
+
         if (username.length() > 15) {
             throw new InvalidUsernameException(username, "Username exceeds Kahoot's 15 character limit!");
         }
