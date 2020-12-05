@@ -1,4 +1,6 @@
-package dev.tvanderb.kahoot4j.api.events;
+package dev.tvanderb.kahoot4j.annotations;
+
+import dev.tvanderb.kahoot4j.api.events.Event;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
