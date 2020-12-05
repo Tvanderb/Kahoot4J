@@ -1,6 +1,7 @@
 package dev.tvanderb.kahoot4j.api.events;
 
 import dev.tvanderb.kahoot4j.api.KahootClient;
+import org.jetbrains.annotations.NotNull;
 
 /**
  * Base event class.
@@ -16,6 +17,7 @@ public class Event {
      *
      * @param client The {@link dev.tvanderb.kahoot4j.api.KahootClient KahootClient} that this event is for.
      */
+    @NotNull
     public Event(KahootClient client) {
         this.client = client;
     }
@@ -23,6 +25,7 @@ public class Event {
     /**
      * @return The {@link dev.tvanderb.kahoot4j.api.KahootClient KahootClient} that this event is for.
      */
+    @NotNull
     public KahootClient getClient() {
         return client;
     }

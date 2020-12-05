@@ -1,5 +1,7 @@
 package dev.tvanderb.kahoot4j.api.exception;
 
+import org.jetbrains.annotations.NotNull;
+
 /**
  * Exception thrown when there's something wrong with a username.
  *
@@ -15,7 +17,7 @@ public class InvalidUsernameException extends Exception {
      * @param username The username that caused this {@link InvalidUsernameException}.
      * @param message The message to show in the stack trace.
      */
-    public InvalidUsernameException(String username, String message) {
+    public InvalidUsernameException(@NotNull String username, @NotNull String message) {
         super(message);
 
         this.username = username;
@@ -24,6 +26,7 @@ public class InvalidUsernameException extends Exception {
     /**
      * @return The username responsible for this {@link InvalidUsernameException}.
      */
+    @NotNull
     public String getFaultyUsername() {
         return username;
     }

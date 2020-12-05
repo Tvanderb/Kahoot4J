@@ -28,6 +28,7 @@ public interface IEventManager {
     /**
      * @return A list of this {@link IEventManager}'s listeners.
      */
+    @NotNull
     List<KahootEventListener> getEventListeners();
 
     /**

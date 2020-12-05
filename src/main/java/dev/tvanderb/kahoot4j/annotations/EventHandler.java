@@ -1,6 +1,7 @@
 package dev.tvanderb.kahoot4j.annotations;
 
 import dev.tvanderb.kahoot4j.api.events.Event;
+import org.jetbrains.annotations.NotNull;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -18,5 +19,5 @@ public @interface EventHandler {
     /**
      * @return The {@link dev.tvanderb.kahoot4j.api.events.Event Event} that this method is listening for.
      */
-    Class<? extends Event> target();
+    @NotNull Class<? extends Event> target();
 }
