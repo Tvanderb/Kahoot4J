@@ -3,7 +3,7 @@ package dev.tvanderb.kahoot4j.api.exception;
 import org.jetbrains.annotations.NotNull;
 
 /**
- * Exception thrown when there's something wrong with a username.
+ * This exception is thrown when there's something wrong with a username.
  *
  * @author Talon 'tvanderb' Vanderbeken
  */
