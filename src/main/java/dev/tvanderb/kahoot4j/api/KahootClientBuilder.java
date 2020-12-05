@@ -32,7 +32,7 @@ public class KahootClientBuilder {
 
     /**
      * Change the EventManger of this {@link KahootClientBuilder KahootBuilder} instance.
-     * The default is [add link]
+     * The default is an instance of {@link dev.tvanderb.kahoot4j.internal.events.DefaultEventManager DefaultEventManager}.
      *
      * @param eventManager The new {@link dev.tvanderb.kahoot4j.api.events.IEventManager IEventManager}.
      */
