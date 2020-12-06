@@ -26,8 +26,9 @@ public class KahootClientBuilder {
      *
      * @param username The new username.
      */
-    public void setUsername(@NotNull String username) {
+    public KahootClientBuilder setUsername(@NotNull String username) {
         this.username = username;
+        return this;
     }
 
     /**
@@ -36,8 +37,9 @@ public class KahootClientBuilder {
      *
      * @param eventManager The new {@link dev.tvanderb.kahoot4j.api.events.IEventManager IEventManager}.
      */
-    public void setEventManager(@NotNull IEventManager eventManager) {
+    public KahootClientBuilder setEventManager(@NotNull IEventManager eventManager) {
         this.eventManager = eventManager;
+        return this;
     }
 
     /**
@@ -45,8 +47,9 @@ public class KahootClientBuilder {
      *
      * @param listener The listener to add.
      */
-    public void addEventListener(KahootEventListener listener) {
+    public KahootClientBuilder addEventListener(KahootEventListener listener) {
         this.eventManager.addEventListener(listener);
+        return this;
     }
 
     /**
@@ -54,8 +57,9 @@ public class KahootClientBuilder {
      *
      * @param listener The listener to add.
      */
-    public void removeEventListener(KahootEventListener listener) {
+    public KahootClientBuilder removeEventListener(KahootEventListener listener) {
         this.eventManager.removeEventListener(listener);
+        return this;
     }
 
     /**
