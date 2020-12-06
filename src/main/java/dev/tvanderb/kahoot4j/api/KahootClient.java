@@ -1,7 +1,12 @@
 package dev.tvanderb.kahoot4j.api;
 
+import dev.tvanderb.kahoot4j.api.entities.Game;
 import dev.tvanderb.kahoot4j.api.events.IEventManager;
+import dev.tvanderb.kahoot4j.api.exception.CouldNotConnectException;
+import dev.tvanderb.kahoot4j.api.exception.InvalidGamePinException;
 import org.jetbrains.annotations.NotNull;
+
+import java.io.IOException;
 
 /**
  * A class representing a client-side Kahoot player.
@@ -38,5 +43,13 @@ public interface KahootClient {
      * @return The set {@link dev.tvanderb.kahoot4j.api.events.IEventManager IEventManager} for this {@link dev.tvanderb.kahoot4j.api.KahootClient KahootClient}.
      */
     IEventManager getEventManager();
+
+    /**
+     * Connect to a Kahoot Game.
+     *
+     * @param gamePin The game pin of the game you wish to connect to.
+     * @return The {@link Game} object representing that game.
+     */
+    Game connect(int gamePin) throws IOException, InvalidGamePinException, CouldNotConnectException;
 
 }
