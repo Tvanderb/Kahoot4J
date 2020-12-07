@@ -23,7 +23,8 @@ public interface Answer {
     boolean wasCorrect();
 
     /**
-     * @apiNote This array will only contain other answers when it was a jumble question.
+     * NOTE: This array will only contain other answers when it was a jumble question.
+     *
      * @return The correct answer.
      */
     AnswerBlock[] correctAnswer();
